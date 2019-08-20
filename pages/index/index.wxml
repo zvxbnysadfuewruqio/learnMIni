@@ -1,0 +1,4 @@
+<!--pages/index/index.wxml-->
+<text class='title'>我是小程序首页</text>
+<button size='mini'>我是按钮</button>
+
