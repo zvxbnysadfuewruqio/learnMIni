@@ -1,4 +1,5 @@
 <!--pages/index/index.wxml-->
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取授权</button>
 <view>hello {{name}}</view>
 <view>我的年龄:{{age}}</view>
 <view wx:for="{{res}}" wx:if="{{isFalse}}" wx:key="item">{{item}}</view>

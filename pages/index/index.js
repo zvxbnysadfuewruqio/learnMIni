@@ -1,3 +1,9 @@
+
+const app=getApp();
+
+console.log(app.globalData.name)
+console.log(app.globalData.age)
+
 // pages/index/index.js
 Page({
 
@@ -22,6 +28,10 @@ Page({
       counter: this.data.counter - 1
     })
     // this.data.counter+=1;
+  },
+  //获取用户信息
+  getUserInfo(event){
+    console.log(event)
   },
   /**
    * 生命周期函数--监听页面加载

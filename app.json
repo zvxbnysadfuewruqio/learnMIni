@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/about/about"
+    "pages/category/category"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
@@ -9,22 +9,26 @@
     "navigationBarTitleText": "首页",
     "backgroundColor": "red",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "backgroundColorTop": "#ff0000"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text":"首頁"
+        "text": "首頁",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home_active.png"
       },
       {
-        "pagePath": "pages/about/about",
-        "text":"关于"
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category_active.png"
       }
     ],
-    "color": "#ff0000",
-    "selectedColor": "#66ccff"
+    "color": "#000",
+    "selectedColor": "#ff5777"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap61.json"
 }
