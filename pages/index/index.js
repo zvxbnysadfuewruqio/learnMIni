@@ -5,9 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name:"DGJ",
+    age:18,
+    res:[1,2,3,4,5],
+    isFalse:true,
+    counter:0
   },
-
+  addCounter(){
+    this.setData({
+      counter: this.data.counter+1
+    })
+    // this.data.counter+=1;
+  },
+  reCounter() {
+    this.setData({
+      counter: this.data.counter - 1
+    })
+    // this.data.counter+=1;
+  },
   /**
    * 生命周期函数--监听页面加载
    */

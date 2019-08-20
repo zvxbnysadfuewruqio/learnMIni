@@ -2,5 +2,29 @@
   "pages": [
     "pages/index/index",
     "pages/about/about"
-  ]
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页",
+    "backgroundColor": "red",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "backgroundColorTop": "#ff0000"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text":"首頁"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text":"关于"
+      }
+    ],
+    "color": "#ff0000",
+    "selectedColor": "#66ccff"
+  },
+  "sitemapLocation": "sitemap.json"
 }
