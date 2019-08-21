@@ -1,8 +1,8 @@
 
 const app=getApp();
 
-console.log(app.globalData.name)
-console.log(app.globalData.age)
+// console.log(app.globalData.name)
+// console.log(app.globalData.age)
 
 // pages/index/index.js
 Page({
@@ -15,7 +15,8 @@ Page({
     age:18,
     res:[1,2,3,4,5],
     isFalse:true,
-    counter:0
+    counter:0,
+    list:[]
   },
   addCounter(){
     this.setData({
@@ -31,13 +32,27 @@ Page({
   },
   //获取用户信息
   getUserInfo(event){
-    console.log(event)
+    // console.log(event)
   },
+  //滚动事件
+  onPageScroll(obj){
+    // console.log(obj)
+  }
+  ,
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://123.207.32.32:8000/api/v1/recommend',
+      success:res=>{
+        // console.log(res)
+        const data=res.data.data.list
+        this.setData({
+          list: data
+        })
+      }
+    })
   },
 
   /**
@@ -72,14 +87,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    console.log("下拉刷新")
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log("上拉加载")
   },
 
   /**

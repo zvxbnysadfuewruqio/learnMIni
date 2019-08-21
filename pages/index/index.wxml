@@ -8,3 +8,4 @@
 <view>counter:{{counter}}</view>
 <button size='mini' bindtap='addCounter'>+</button>
 <button size='mini' bindtap='reCounter'>-</button>
+<view wx:for="{{list}}" wx:key="item">{{item.title}}</view>

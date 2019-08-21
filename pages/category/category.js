@@ -5,9 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgPaths:[]
   },
-
+  //图片加载完成
+  imgBin(){
+    // console.log("图片加载完成")
+  },
+  //加载相册
+  handlech(){
+    const that=this
+    wx.chooseImage({
+      success: function(res) {
+        const path = res.tempFilePaths
+        that.setData({
+          imgPaths: path
+        })
+        console.log(res)
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

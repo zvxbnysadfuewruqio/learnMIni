@@ -1,1 +1,25 @@
 /* pages/category/category.wxss */
+.box{
+  width:50%;
+  height: 100px;
+  background: orange
+}
+.box-active{
+  background: red;
+  font-size: 30px;
+}
+input{
+  border: 1px solid red;
+  margin:10px 30px;
+}
+.scroll-view{
+  background: yellow;
+  white-space: nowrap;
+}
+.scroll-item{
+  height: 100px;
+  width:100px;
+  background: red;
+  margin:10px;
+  display: inline-block;
+}
