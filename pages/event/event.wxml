@@ -1,0 +1,11 @@
+<!--pages/event/event.wxml-->
+<my-cpn title="哈哈哈" titleclass="red" bind:add="add"/>
+<my-cpn title="哈嘿嘿嘿哈哈" titleclass="green" bind:add="add"/>
+<my-cpn titleclass="bli" bind:add="add"/>
+<view>当前计数{{counter}}</view>
+<w-tab titles="{{titles}}" bind:itemclick="tabclick" id="tab-id"/>
+
+<my-slot>
+  <button slot="slot2" size="mini">+++</button>
+  <slider slot="slot1"></slider>
+</my-slot>

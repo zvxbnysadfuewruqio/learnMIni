@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/event/event",
+    "components/w-tab/w-tab"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
@@ -29,5 +31,7 @@
     ],
     "color": "#000",
     "selectedColor": "#ff5777"
-  }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap76.json"
 }

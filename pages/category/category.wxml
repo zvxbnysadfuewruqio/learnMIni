@@ -12,3 +12,7 @@
 </scroll-view>
 <import src="/wxml/abc.wxml"/>
 <template is="abc" data="{{text:'123'}}"/>
+
+<wxs src="../../wxs/info.wxs" module="info"/>
+<view>{{info.title}}</view>
+<view>{{info.dateFormat(time,"yyyy-MM-dd hh:mm:ss")}}</view>

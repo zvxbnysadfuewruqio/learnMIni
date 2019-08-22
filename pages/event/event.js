@@ -1,35 +1,31 @@
-// pages/about/about.js
+// pages/event/event.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPaths:[],
-    time:1560598160
+    counter:0,
+    titles:["流行","新款","精选"]
   },
-  //图片加载完成
-  imgBin(){
-    // console.log("图片加载完成")
+  //counter+1
+  add(event){
+    this.setData({
+      counter:this.data.counter+1
+    })
   },
-  //加载相册
-  handlech(){
-    const that=this
-    wx.chooseImage({
-      success: function(res) {
-        const path = res.tempFilePaths
-        that.setData({
-          imgPaths: path
-        })
-        console.log(res)
-      },
+  tabclick(event){
+    // console.log(event)
+    const my_tab=this.selectComponent("#tab-id")
+    my_tab.setData({
+      currindex:2
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(this.data.data)
+    
   },
 
   /**

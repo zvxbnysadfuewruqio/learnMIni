@@ -1,0 +1,10 @@
+/* pages/event/event.wxss */
+.red{
+  color: red
+}
+.green{
+  color: green
+}
+.bli{
+  color: blue
+}
