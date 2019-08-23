@@ -9,3 +9,5 @@
 <button size='mini' bindtap='addCounter'>+</button>
 <button size='mini' bindtap='reCounter'>-</button>
 <view wx:for="{{list}}" wx:key="item">{{item.title}}</view>
+
+<button size="mini" bind:tap="handleShow">显示</button>

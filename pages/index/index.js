@@ -1,5 +1,6 @@
 
 const app=getApp();
+import request from "../../service/network.js"
 
 // console.log(app.globalData.name)
 // console.log(app.globalData.age)
@@ -37,21 +38,32 @@ Page({
   //滚动事件
   onPageScroll(obj){
     // console.log(obj)
-  }
-  ,
+  },
+  //显示toast
+  handleShow(){
+    wx.showToast({
+      title: '12312321',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://123.207.32.32:8000/api/v1/recommend',
-      success:res=>{
-        // console.log(res)
-        const data=res.data.data.list
-        this.setData({
-          list: data
-        })
-      }
+    // wx.request({
+    //   url: 'http://123.207.32.32:8000/api/v1/recommend',
+    //   success:res=>{
+    //     // console.log(res)
+    //     const data=res.data.data.list
+    //     this.setData({
+    //       list: data
+    //     })
+    //   }
+    // })
+
+    request({
+      url:"http://123.207.32.32:8000/api/v1/recommend",
+    }).then(res=>{
+      // console.log(res)
     })
   },
 
